@@ -61,6 +61,28 @@ Si el usuario es incorrecto se muestra un mensaje de error, informando que revis
 ![](img/verificacionUsuario.png)
 
 
+## Despliegue en AWS
+Primero se crean las dos instancias de EC2 para cada servicio, con el par de llaves para poder conectarse a cada maquina a traves de SSH.
+
+![](img/instancias.png)
+
+Despues se instala git y java en cada una de las maquinas, con el fin de clonar el proyecto y correr en cada maquina un servico. Para esto utilizamos los siguientes comandos:
+
+ * Instalar git: sudo yum install git
+ * Instalar java: sudo yum install java-1.8.0
+
+Una vez instaladas, se ingresa a la ruta ec2-user y se clona el proyecto
+ * cd "/home/Ec2-user/"
+ * git clone UrlRepositorio
+
+Ejecute las instancias con el siguiente comando
+ * java -cp "target/classes:target/dependency/*" "[Nombre de la clase main]"
+
+Por ultimo se debe habilitar en el security group de cada maquina, el pueto para acceder a los servicios, en este caso el pueto es el 4567
+
+![](img/puertos.png)
+
+
 
 
 

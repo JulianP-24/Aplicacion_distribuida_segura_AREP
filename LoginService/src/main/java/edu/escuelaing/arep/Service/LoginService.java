@@ -13,8 +13,8 @@ import spark.Response;
 public class LoginService {
     
     
-    private final String URL_SERVICE = "https://localhost:4567";
-    // private final String URL_SERVICE = "https://ec2-184-73-66-215.compute-1.amazonaws.com:4500";
+    //private final String URL_SERVICE = "https://localhost:4567";
+    private final String URL_SERVICE = "https://ec2-18-234-218-60.compute-1.amazonaws.com:4567";
 
     /**
      * Método que autentica un usuario
