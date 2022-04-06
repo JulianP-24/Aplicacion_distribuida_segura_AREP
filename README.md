@@ -16,3 +16,27 @@ Cada servicio esta conformado por un certificado propio, el servicio de login, h
  * El cliente es por donde se realizan las solicitudes al servicio de login.
  * El login service corre por el puerto 5000.
  * El authenticacion service corre por el puerto 4567
+
+
+ ## Creacion de los certificados
+ La arquitectura se puede escalar por medio de la generación de certificados propios de los nuevos servicios y la inclusión del certificado del nuevo servicio el archivo myTrustStore, para autorizar el acceso desde la que recibimos las credenciales, en el directorio de los certificados autorizados de LoginService. Así como conectando un endpoint del servicio principal para consumir el nuevo.
+ 
+  * Usando los siguientes comandos poder generar, un par de llaves públicas y privadas y un certificado. Y los almacenamos todo en un archivo protegido. Se hace uso del formato PKCS12, un formato estándar para almacenar llaves y certificados.
+
+  `keytool -genkeypair -alias ecikeypair -keyalg RSA -keysize 2048 -storetype PKCS12 -keystore ecikeystore.p12 -validity 3650`
+
+  * Se exporta el certificado a un archivo con el siguiente comando.
+
+  `keytool -export -keystore ./ecikeystore.p12 -alias ecikeypair -file ecicert.cer`
+
+  * Por ultimo se importa el certificado a un myTrustStore.
+
+  `keytool -import -file ./ecicert.cer -alias firstCA -keystore myTrustStore`
+
+ ## Probando de manera local con los certificados
+
+ 
+
+
+
+
