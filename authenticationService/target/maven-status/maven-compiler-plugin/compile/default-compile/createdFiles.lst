@@ -1,0 +1,4 @@
+edu\escuelaing\arep\Model\User.class
+edu\escuelaing\arep\SparkWebServer.class
+edu\escuelaing\arep\Service\AuthtenticationService.class
+edu\escuelaing\arep\controller\authenticationController.class
