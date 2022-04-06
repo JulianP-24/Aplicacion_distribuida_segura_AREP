@@ -13,7 +13,7 @@ import edu.escuelaing.arep.Security.SecureUrlReader;
 import edu.escuelaing.arep.controller.LoginController;
 import edu.escuelaing.arep.Service.LoginService;
 
-public class SparkWebServer {
+public class SparkWebServerLogin {
     private static LoginController loginController;
 
     public static void main(String[] args) throws KeyManagementException, KeyStoreException, NoSuchAlgorithmException,CertificateException, FileNotFoundException, IOException {
