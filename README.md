@@ -35,7 +35,33 @@ Cada servicio esta conformado por un certificado propio, el servicio de login, h
 
  ## Probando de manera local con los certificados
 
- 
+ Corriendo sin una comunicacion https, nos muestra la pagina con el mensaje, pero como oculto imposible de leer, comos se muestra a continuacion
+
+ ![](img/corriendoSinhttps.png)
+
+ Para que no aparezca asi, se corre con una comunicacion https, con esto se asegura una comunicacion segura, mostrando claramente el mensaje de parte del servicio de login como se muestra a continuacion
+
+![](img/HelloLogin.png)
+
+Y el mensaje del serviciod e autenticacion, como se muestra a continuacion
+
+![](img/HelloAuth.png)
+
+Una vez que se corra con una comunicacion https y el usuario sea validado, en este caso se crea un solo usuario para efectos de prueba, con la siguiente informacion
+
+ * Username: prueba
+ * password: 2401
+
+Una vez validada la informacion, aparece el mensaje dandonos acceso, como se muestra a continuacion
+
+![](img/corriendoConhttps.png)
+
+Si el usuario es incorrecto se muestra un mensaje de error, informando que revise las credenciales, como se muestra a continuacion
+
+![](img/verificacionUsuario.png)
+
+
+
 
 
 
