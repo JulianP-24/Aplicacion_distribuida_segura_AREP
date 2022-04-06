@@ -72,7 +72,7 @@ Despues se instala git y java en cada una de las maquinas, con el fin de clonar 
  * Instalar java: sudo yum install java-1.8.0
 
 Una vez instaladas, se ingresa a la ruta ec2-user y se clona el proyecto
- * cd "/home/Ec2-user/"
+ * cd "/home/ec2-user/"
  * git clone UrlRepositorio
 
 Ejecute las instancias con el siguiente comando
